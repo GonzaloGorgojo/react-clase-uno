@@ -66,6 +66,7 @@
 }
 
 .input {
+  margin-left: 50vw;
   border-radius: 5px;
   border-style: none;
   padding: 5px;
