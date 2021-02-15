@@ -10,14 +10,19 @@
  */
 
 export function UncontrolledCheckbox(props) {
-    const [chequeado, setChequeado] = React.useState(props.initialValue)
+  const [chequeado, setChequeado] = React.useState(props.initialValue);
 
-    return (
-        <div>
-        <label for={props.nombre}>{props.nombre}</label>
-        <input type="checkbox" onChange={() => setChequeado(!chequeado)} checked={chequeado} name={props.nombre} />
-       </div>
-    );
+  return (
+    <div>
+      <label for={props.nombre}>{props.nombre}</label>
+      <input
+        type="checkbox"
+        onChange={() => setChequeado(!chequeado)}
+        checked={chequeado}
+        name={props.nombre}
+      />
+    </div>
+  );
 }
 
 /*
@@ -34,10 +39,12 @@ export function UncontrolledCheckbox(props) {
  */
 
 export function CheckboxList(props) {
-    const nombres = Object.keys(props.items)
-    return (
-       nombres.map(item => <UncontrolledCheckbox key={item} nombre={item} initialValue={props.items[item]}/>)
-        )
-        
+  const nombres = Object.keys(props.items);
+  return nombres.map((item) => (
+    <UncontrolledCheckbox
+      key={item}
+      nombre={item}
+      initialValue={props.items[item]}
+    />
+  ));
 }
-

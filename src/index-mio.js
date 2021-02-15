@@ -1,7 +1,7 @@
 import { BlogPost } from "./tarea/Tarea1.js";
 import { MatchNombre, PasswordInput, ValidationInput } from "./tarea/Tarea2.js";
 import { CheckboxList } from "./tarea/Tarea3.js";
-
+import { CheckboxListWithState } from "./tarea/Tarea4.js";
 
 ReactDOM.render(
   <div>
@@ -27,13 +27,21 @@ ReactDOM.render(
       }
       isPassword={false}
     />
-<CheckboxList
-items={{
-            uno: false,
-            dos: true,
-            tres: false
-        }}
-        />
+    <CheckboxList
+      items={{
+        uno: false,
+        dos: true,
+        tres: false,
+      }}
+    />
+    <hr></hr>
+    <CheckboxListWithState
+      items={{
+        uno: false,
+        dos: true,
+        tres: false,
+      }}
+    />
   </div>,
   document.getElementById("react-app")
 );
